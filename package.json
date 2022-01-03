@@ -1,0 +1,23 @@
+{
+  "name": "Alphabetical-Sort-ICS4U-Culminating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/destroyer22719/Alphabetical-Sort-ICS4U-Culminating.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/destroyer22719/Alphabetical-Sort-ICS4U-Culminating/issues"
+  },
+  "homepage": "https://github.com/destroyer22719/Alphabetical-Sort-ICS4U-Culminating#readme"
+}

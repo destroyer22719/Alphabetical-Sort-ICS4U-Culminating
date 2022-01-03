@@ -25,7 +25,6 @@ try {
 	console.log(error);
 }
 
-
 //function to sort words
 function quickSort(array) {
     if (array.length <= 1) {
@@ -43,14 +42,15 @@ function quickSort(array) {
     If the value of the element is smaller than the pivot (first element of the array) add it to the left side, else add it to the right side.
 
     Use this process for the individual left side array that're smaller than pivot and the right side array which is greater than or equal to pivot again, rinse and repeat till there is no left and right side array or there's just one value.
-  
-  */
+  	*/
     for (let i = 1; i < array.length; i++) {
         array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
     }
 
     return [...quickSort(left), ...pivot, ...quickSort(right)];
 }
+
+exports.quickSort = quickSort;
 
 //sorts txt files
 function sortTXT() {
@@ -62,6 +62,9 @@ function sortTXT() {
         console.log(error);
     }
 }
+
+exports.sortTXT = sortTXT;
+
 
 //sorts json file
 function sortJSON() {
@@ -80,6 +83,9 @@ function sortJSON() {
         console.log(error);
     }
 }
+
+exports.sortJSON = sortJSON;
+
 
 //writes to output file
 function outputToFile(output) {
@@ -100,3 +106,5 @@ function outputToFile(output) {
         console.log(error);
     }
 }
+
+exports.outputToFile = outputToFile;
