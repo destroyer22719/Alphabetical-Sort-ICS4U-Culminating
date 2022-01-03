@@ -12,8 +12,7 @@ function quickSort(array) {
 
     const pivot = array[0];
     //error handling for incorrect data type
-    if (typeof pivot !== "string" || typeof pivot !== "number") throw new Error("Invalid data, must be an array of strings and or numbers only");
-
+    if (typeof pivot !== "string" && typeof pivot !== "number") throw new Error("Invalid data, must be an array of strings and or numbers only");
     //values that're less than pivot value
     const left = [];
     //values that're equal to or more than the pivot value
@@ -28,11 +27,12 @@ function quickSort(array) {
 
     for (let i = 1; i < array.length; i++) {
         //checks if data type is valid
-        if (typeof array[i] !== "string" || typeof array[i] !== "number") throw new Error("Invalid data, must be an array of strings and or numbers only");
+        if (typeof array[i] !== "string" && typeof array[i] !== "number") throw new Error("Invalid data, must be an array of strings and or numbers only");
         array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
     }
 
-    return [...quickSort(left), ...pivot, ...quickSort(right)];
+    return quickSort(left).concat(pivot, quickSort(right));
 }
+
 
 module.exports = quickSort;
