@@ -1,6 +1,8 @@
 *
 !.gitignore
 !README.md
-!__tests__/
+!__tests__/application/*.js
+!__tests__/functions/*.js
+
 !*.js
 !package*
