@@ -1,8 +1,9 @@
 *
 !.gitignore
 !README.md
-!__tests__/application/*.js
-!__tests__/functions/*.js
-
-!*.js
+!controller/
+!__tests__/
+!__tests__/functions/
+!__tests__/application/
+!**/*.js
 !package*
