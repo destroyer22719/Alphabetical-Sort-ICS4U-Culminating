@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const sortJSON = require("./controller/sortJSON");
 const sortTXT = require("./controller/sortTXT");
 
@@ -9,6 +10,9 @@ if (!inputFile) throw new Error("No input file provided");
 const outputFile = process.argv[3] || inputFile;
 
 const inputFileExt = path.extname(inputFile).substring(1);
+
+if(!fs.existsSync(inputFile)) throw new Error(`no such file or directory ${inputFile}`);
+else if(!fs.existsSync(outputFile)) throw new Error(`no such file or directory ${outputFile}`);
 
 try {
     switch (inputFileExt) {

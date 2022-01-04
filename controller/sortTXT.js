@@ -15,7 +15,7 @@ function sortTXT(inputFile, outputFile) {
         outputToFile(quickSort(data), outputFile);
     } catch (error) {
         //throws error if there is error with reading or writing
-        console.log(error);
+        throw new Error(error);
     }
 }
 

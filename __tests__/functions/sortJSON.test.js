@@ -85,6 +85,21 @@ beforeAll(() => {
         ]),
         "utf8"
     );
+    fs.writeFileSync(
+        path.join(inputDir, "input4a.json"),
+        JSON.stringify({}),
+        "utf8"
+    );
+    fs.writeFileSync(
+        path.join(inputDir, "input4b.json"),
+        JSON.stringify(["a", [], "c"]),
+        "utf8"
+    );
+    fs.writeFileSync(
+        path.join(inputDir, "input4c.json"),
+        JSON.stringify(["a", {}, "c"]),
+        "utf8"
+    );
 });
 
 afterAll(() => {
@@ -95,6 +110,13 @@ afterAll(() => {
 });
 
 describe("To test the sortJSON function", () => {
+    test("testing for errors", () => {
+        expect(fs.existsSync(path.join(inputDir, "input4a.json"))).toBe(true);
+        expect(() => {
+            sortJSON(path.join(inputDir, "input4a.json"));
+        }).toThrow("incompatible data, must be an array");
+    });
+
     test("testing one line", () => {
         sortJSON(
             path.join(inputDir, "input1.json"),
@@ -163,7 +185,9 @@ describe("To test the sortJSON function", () => {
         );
         expect(fs.existsSync(path.join(outputDir, "output3b.json"))).toBe(true);
         expect(
-            JSON.parse(fs.readFileSync(path.join(outputDir, "output3b.json"), "utf8"))
+            JSON.parse(
+                fs.readFileSync(path.join(outputDir, "output3b.json"), "utf8")
+            )
         ).toEqual([
             "a",
             "a",
