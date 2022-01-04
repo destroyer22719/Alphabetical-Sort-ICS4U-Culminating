@@ -46,9 +46,13 @@ beforeAll(() => {
 });
 
 afterAll(() => {
-    //removes every file in the output directory after finishing
+    //removes every file in the output and input directory after finishing
     fs.readdirSync(outputDir).forEach((file) =>
         fs.unlinkSync(path.join(outputDir, file))
+    );
+
+    fs.readdirSync(inputDir).forEach((file) =>
+        fs.unlinkSync(path.join(inputDir, file))
     );
 });
 
@@ -81,7 +85,7 @@ describe("To test the sortTXT function", () => {
         expect(fs.existsSync(path.join(outputDir, "output2b.txt"))).toBe(true);
         expect(
             fs.readFileSync(path.join(outputDir, "output2b.txt"), "utf8")
-        ).toBe(fs.readFileSync(path.join(outputDir, "output2b.txt"), "utf8"));
+        ).toBe(fs.readFileSync(path.join(outputDir, "output2a.txt"), "utf8"));
     });
 
     test("testing more than 2 lines of letters", () => {
