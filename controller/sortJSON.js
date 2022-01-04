@@ -9,10 +9,6 @@ function sortJSON(inputFile, outputFile) {
 
         if (!Array.isArray(data))
             throw new Error("incompatible data, must be an array");
-        if (data.every((i) => typeof i !== "string" || typeof i !== "number"))
-            throw new Error(
-                "incompatible data, must be an array of strings or numbers only"
-            );
         outputToFile(quickSort(data), outputFile);
     } catch (error) {
         //throws error if there is error with reading or writing
