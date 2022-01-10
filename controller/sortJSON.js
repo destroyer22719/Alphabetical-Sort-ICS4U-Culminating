@@ -2,7 +2,13 @@ const fs = require("fs");
 const outputToFile = require("./outputToFile");
 const quickSort = require("./quickSort");
 
-//sorts json file
+
+/**
+ * Function to sort the values in a json file
+ * 
+ * @param {string} inputFile path of input file 
+ * @param {string} outputFile path of output file
+ */
 function sortJSON(inputFile, outputFile) {
     try {
         const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));

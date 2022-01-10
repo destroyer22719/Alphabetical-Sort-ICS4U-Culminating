@@ -3,8 +3,8 @@
 !README.md
 !controller/
 !__tests__/
-!__tests__/functions/
-!__tests__/application/
+!__tests__/integration/
+!__tests__/unit/
 !**/*.js
 !package*
 !.eslintrc.json

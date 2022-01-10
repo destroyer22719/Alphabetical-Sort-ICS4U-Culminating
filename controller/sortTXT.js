@@ -6,7 +6,6 @@ const quickSort = require("./quickSort");
  * 
  * @param {String} inputFile - path to input file
  * @param {String} outputFile - path to output file
- * @returns {void}
  */
 
 function sortTXT(inputFile, outputFile) {

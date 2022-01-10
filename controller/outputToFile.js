@@ -1,7 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 
-//writes to output file
+/**
+ * function to take the output data and write it to a file
+ * 
+ * @param {string} outputData data of output
+ * @param {string} outputFile path to file to put outputData
+ */
 function outputToFile(outputData, outputFile) {
     const outputFileExt = path.extname(outputFile);
 
