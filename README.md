@@ -50,4 +50,16 @@ I decided to make every function into its own file, and to import them when nece
 
 ## Why you chose certain processes to be recursive
 
-I chose the `quickSort` function to be recursive because that's how it's supposed to be implemented
+I chose the `quickSort` function to be recursive because that's how it's supposed to be implemented.
+
+## Why you implemented the search and/or sorting methods that you chose
+
+Because quick sort is the best algorithm out of all the available ones, especially for large amounts of data.
+Bubble sort needs to re-iterate the entire array every time something is out of order which is time consuming.
+Insertion sort is okay except for large amount of values it has to always keep on going back to find where is the right index to put the element.
+Selection sort is also not as good for large data sets as it has to iterate, and swap through every element. 
+quick sort is better because it can break the array into smaller datasets which is ideal for large data sets.
+
+## Why the program reads/writes to a file, and how is this useful to the program
+
+The program reads the file to know what to sort in the first place and outputs to a file for the user the user to see the sorted values.
