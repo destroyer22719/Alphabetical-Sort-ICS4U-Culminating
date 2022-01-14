@@ -1,3 +1,12 @@
+/*
+    Nathan Cai
+    Jan 14, 2022
+    sortTXT.js
+    334915105
+
+    file with sortTXT function to sort values in txt files
+*/
+
 const fs = require("fs");
 const outputToFile = require("./outputToFile");
 const quickSort = require("./quickSort");

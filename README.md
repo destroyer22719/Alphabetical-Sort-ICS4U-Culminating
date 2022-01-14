@@ -67,15 +67,15 @@ I decided to make every function into its own file, and to import them when nece
 
 the directory `__tests__` contains some automated tests for the code.
 
-`__tests__/unit` has unit tests for each function and `__tests__/integration` has integration tests and will run the program like if it were a user
+`__tests__/unit` has unit tests for each function and `__tests__/integration` has integration tests and will run the program like if it were the end user
 
 ## Why you chose certain processes to be recursive
 
-I chose the `quickSort` function to be recursive because that's how it's supposed to be implemented.
+I chose the `quickSort` function to be recursive because that's how it's supposed to be implemented. Quick sort will keep on dividing the values into smaller pieces and sorting them.
 
 ## Why you implemented the search and/or sorting methods that you chose
 
-Because quick sort is the best algorithm out of all the available ones, especially for large amounts of data.
+Because quick sort is the best algorithm out of all the available ones when it comes to for large amounts of data.
 Bubble sort needs to re-iterate the entire array every time something is out of order which is time consuming.
 Insertion sort is okay except for large amount of values it has to always keep on going back to find where is the right index to put the element.
 Selection sort is also not as good for large data sets as it has to iterate, and swap through every element. 

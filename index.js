@@ -1,3 +1,12 @@
+/*
+    Nathan Cai
+    Jan 14, 2022
+    index.js
+    334915105
+
+    heart of the program and handles command line arguements provided by the user to generate the necessary output
+*/
+
 const path = require("path");
 const fs = require("fs");
 const sortJSON = require("./controller/sortJSON");

@@ -1,5 +1,16 @@
+/*
+    Nathan Cai
+    Jan 14, 2022
+    quickSort.js
+    334915105
+
+    file with quickSort function to sort arrays
+*/
+
+
 /**
  * function to sort arrays using the quick sort algorithm
+ * 
  * 
  * @param {String[]|Number[]} array an array to sort 
  * @returns {String[]|Number[]} sorted array

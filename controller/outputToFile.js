@@ -1,3 +1,12 @@
+/*
+    Nathan Cai
+    Jan 14, 2022
+    outputToFile.js
+    334915105
+
+    file with outputToFile function to outputTOFile
+*/
+
 const fs = require("fs");
 const path = require("path");
 

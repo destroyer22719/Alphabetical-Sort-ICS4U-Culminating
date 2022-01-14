@@ -1,3 +1,12 @@
+/*
+    Nathan Cai
+    Jan 14, 2022
+    outputToFile.js
+    334915105
+
+    file with sortJSON function to sort values in json files
+*/
+
 const fs = require("fs");
 const outputToFile = require("./outputToFile");
 const quickSort = require("./quickSort");
