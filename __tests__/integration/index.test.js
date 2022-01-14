@@ -63,6 +63,14 @@ describe("to test the code as a CLI application as an end user", () => {
             "utf8"
         );
 
+        fs.writeFileSync(
+            path.join(inputDir, "input.json"),
+            JSON.stringify({
+                values: ["hello", "world"]
+            }),
+            "utf8"
+        );
+
         await expect(
             runProgram(path.join(inputDir, "input1.js"))
         ).rejects.toThrow("unsupported file type must be of type txt or json");
@@ -73,6 +81,12 @@ describe("to test the code as a CLI application as an end user", () => {
                 path.join(outputDir, "output.js")
             )
         ).rejects.toThrow("unsupported file type must be of type txt or json");
+
+        await expect(
+            runProgram(
+                path.join(inputDir, "input.json"),
+            )
+        ).rejects.toThrow("incompatible data, must be an array");
     });
 
     test("txt to txt", async () => {
@@ -136,6 +150,38 @@ describe("to test the code as a CLI application as an end user", () => {
 
         expect(
             JSON.parse(fs.readFileSync(path.join(outputDir, "output2b.json")), "utf8")
+        ).toEqual(["hello","world"]);
+    });
+
+    test("json to json", async () => {
+        fs.writeFileSync(
+            path.join(inputDir, "input1a.json"),
+            JSON.stringify(["hello", "world"]),
+            "utf8"
+        );
+
+        fs.writeFileSync(
+            path.join(inputDir, "input1b.json"),
+            JSON.stringify(["world", "hello"]),
+            "utf8"
+        );
+
+        await runProgram(
+            path.join(inputDir, "input1a.json"),
+            path.join(outputDir, "output1a.json")
+        );
+
+        expect(
+            JSON.parse(fs.readFileSync(path.join(outputDir, "output1a.json")), "utf8")
+        ).toEqual(["hello","world"]);
+
+        await runProgram(
+            path.join(inputDir, "input1b.json"),
+            path.join(outputDir, "output1b.json")
+        );
+
+        expect(
+            JSON.parse(fs.readFileSync(path.join(outputDir, "output1b.json")), "utf8")
         ).toEqual(["hello","world"]);
     });
 });

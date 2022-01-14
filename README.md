@@ -27,6 +27,23 @@ a
 b
 c
 ```
+
+This program also supports sorting json to json, json to txt, and vice versa. BUT it must be an array of strings and or numbers
+
+This is valid
+```json
+[
+    "hello",
+    "world",
+]
+```
+This is NOT valid
+```json
+{
+    "values": ["hello", "world"]
+}
+```
+
 ## Setting Up
 
 To run this program you need to install the code and the dependencies
@@ -46,7 +63,11 @@ $ npm start inputfile [outputFile]
 
 ## How and why you decide to break up your code the way you did
 
-I decided to make every function into its own file, and to import them when necessary, by having them in seperate files I can test them individually in the `__tests/unit` file. The main file, `index.js` handles the command lind logistics of the program and uses whatever function necessary.
+I decided to make every function into its own file, and to import them when necessary, by having them in seperate files I can test them individually in the `__tests__/unit` file. The main file, `index.js` handles the command lind logistics of the program and uses whatever function necessary.
+
+the directory `__tests__` contains some automated tests for the code.
+
+`__tests__/unit` has unit tests for each function and `__tests__/integration` has integration tests and will run the program like if it were a user
 
 ## Why you chose certain processes to be recursive
 
