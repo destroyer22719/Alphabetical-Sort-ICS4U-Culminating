@@ -29,7 +29,7 @@ c
 ```
 ## Setting Up
 
-To run this program you need to install the code and the dependencies
+To run this program you need to make sure your computer can run NodeJS and install the code
 
 First make sure you have NodeJS installed, if not you can install it at https://nodejs.org/en/, installing a modern version is ideal, above version 12.
 
