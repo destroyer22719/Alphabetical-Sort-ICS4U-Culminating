@@ -63,7 +63,7 @@ $ npm start inputfile [outputFile]
 
 ## How and why you decide to break up your code the way you did
 
-I decided to make every function into its own file, and to import them when necessary, by having them in seperate files I can test them individually in the `__tests__/unit` file. The main file, `index.js` handles the command lind logistics of the program and uses whatever function necessary.
+I decided to make every function into its own file in the `controller` directory, and to import them when necessary, by having them in seperate files I can test them individually in the `__tests__/unit` file and it is much cleaner and easier to maintain than having various functions in one big file. The main file, `index.js` handles the command lind logistics of the program and uses whatever function necessary that uses some of the functions in the `controller` directory.
 
 the directory `__tests__` contains some automated tests for the code.
 
